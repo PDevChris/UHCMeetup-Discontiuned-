@@ -1,4 +1,4 @@
-<?php
+§1<?php
 namespace UHCM\traits;
 
 use pocketmine\utils\TextFormat as TE;
@@ -11,14 +11,16 @@ trait ScoreTrait {
     
     public function runningTo(Player $pl,int $time,string $arena) {
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::YELLOW."U".TE::GOLD."H".TE::YELLOW."C".TE::GOLD."_".TE::YELLOW."MEE".TE::GOLD."TU".TE::YELLOW."P"." ");
-$api->setLine($pl, 0,"                       ".TE::BLUE);
-$api->setLine($pl, 1, TE::BOLD.TE::WHITE." Map to play: ");
-$api->setLine($pl, 2, TE::YELLOW."   ".$arena);
-$api->setLine($pl, 3,"                     ".TE::BLUE);
-$api->setLine($pl, 4, TE::BOLD.TE::WHITE." Starting in: ".TE::GOLD.$time);
-$api->setLine($pl, 5,"                  ".TE::BLUE);
-$api->setLine($pl, 6, " §fpacmanlife.cf: 19132 ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."UH".TE::DARK_BLUE."C".TE::DARK_BLUE."_".TE::DARK_BLUE."MEE".TE::DARK_BLUE."TUP".TE::DARK_BLUE."]"." ");
+$api->setLine($pl, 0,"                   ".TE::BLUE);
+$api->setLine($pl, 1, " §1■■■■■■■■■■■■■■■■■■");	    
+$api->setLine($pl, 2, TE::BOLD.TE::DARK_BLUE." Map to play: ");
+$api->setLine($pl, 3, TE::AQUA."   ".$arena);
+$api->setLine($pl, 4,"                     ".TE::BLUE);
+$api->setLine($pl, 5, TE::BOLD.TE::DARK_BLUE." Starting in: ".TE::AQUA.$time);
+$api->setLine($pl, 6,"                  ".TE::BLUE);
+$api->setLine($pl, 7, " §1■■■■■■■■■■■■■■■■■■");	  
+$api->setLine($pl, 8, " §1wcserver.goandplay.fun ");
 $api->getObjectiveName($pl);
 }
 
@@ -28,18 +30,20 @@ public function runningStart(Player $pl,string $arena,int $live,int $time) {
  $borde = $this->plugin->manager->getBorde($arena);
  $next = $this->plugin->manager->getNext($arena);
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::LIGHT_PURPLE."U".TE::DARK_PURPLE."H".TE::LIGHT_PURPLE."C".TE::DARK_PURPLE."_".TE::LIGHT_PURPLE."MEE".TE::DARK_PURPLE."T".TE::LIGHT_PURPLE."UP"." ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."UH".TE::DARK_BLUE."C".TE::DARK_BLUE."_".TE::DARK_BLUE."MEE".TE::DARK_BLUE."T".TE::DARK_BLUE."UP]"." ");
 $api->setLine($pl, 0,"                       ".TE::BLUE);
-$api->setLine($pl, 1, TE::BOLD.TE::WHITE." Map: ".TE::LIGHT_PURPLE.$arena);
+$api->setLine($pl, 10, " §1■■■■■■■■■■■■■■■■■■ ");
+$api->setLine($pl, 1, TE::BOLD.TE::DARK_BLUE." Map: ".TE::AQUA.$arena);
 $api->setLine($pl, 2,"                     ".TE::BLUE);
-$api->setLine($pl, 3, TE::BOLD.TE::WHITE." Alive: ".TE::DARK_PURPLE.$live);
-$api->setLine($pl, 4, TE::BOLD.TE::WHITE." Time: ".str_replace(TE::WHITE,TE::LIGHT_PURPLE,$tt));
+$api->setLine($pl, 3, TE::BOLD.TE::DARK_BLUE." Alive: ".TE::AQUA.$live);
+$api->setLine($pl, 4, TE::BOLD.TE::DARK_BLUE." Time: ".str_replace(TE::AQUA,TE::AQUA,$tt));
 $api->setLine($pl, 5,"                         ".TE::BLUE);
-$api->setLine($pl, 6, TE::WHITE.TE::BOLD." Kills: §r".TE::DARK_PURPLE.$kills);
-$api->setLine($pl, 7, TE::BOLD.TE::WHITE." Borde: ".TE::DARK_PURPLE.$borde);
-$api->setLine($pl, 8, TE::BOLD.TE::WHITE." Next ".TE::LIGHT_PURPLE.$next);
+$api->setLine($pl, 6, TE::WHITE.TE::DARK_BLUE." Kills: §b".TE::AQUA.$kills);
+$api->setLine($pl, 7, TE::BOLD.TE::DARK_BLUE." Border: ".TE::AQUA.$borde);
+$api->setLine($pl, 8, TE::BOLD.TE::DARK_BLUE." Next ".TE::AQUA.$next);
 $api->setLine($pl, 9,"                  ".TE::BLUE);
-$api->setLine($pl, 10, " §fpacmanlife.cf: 19132 ");
+$api->setLine($pl, 10, "§1 ■■■■■■■■■■■■■■■■■■ ");
+$api->setLine($pl, 10, " §1wcserver.goandplay.fun ");
 $api->getObjectiveName($pl);
 }
     
