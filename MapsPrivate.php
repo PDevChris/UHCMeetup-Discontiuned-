@@ -20,7 +20,7 @@ $all = $this->listbox[$pl->getName()] ?? "value";
 /*code*/
 $vote = $all[$data];
 $this->setCageDefault($pl,$vote);
-$pl->sendMessage(TE::WHITE."Tu caja por default cambio ha: ".TE::AQUA.$vote);
+$pl->sendMessage(TE::WHITE."Your default change box has: ".TE::AQUA.$vote);
 /*end code*/
 if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()]); }
 }});
@@ -34,7 +34,7 @@ if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()])
 	     $form->sendToPlayer($pl);
 	     $this->listbox[$pl->getName()] = $list;
 	    } else {
-		$pl->sendMessage(TE::RED."No dispones de cajas aun!");
+		$pl->sendMessage(TE::RED."No cages yet!");
 		}
 	}
 
@@ -54,13 +54,13 @@ if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()])
                $cage[] = ucfirst($box);
                   $my->set("LIST",$cage);
                     $my->save();
-                    $pl->sendMessage(TE::WHITE."Felicidades tienes una nueva caga ".TE::AQUA.$box.TE::WHITE." escojela. en tu almacen!");
+                    $pl->sendMessage(TE::WHITE."You have unlock a cage ".TE::AQUA.$box.TE::WHITE." Pick it. in your warehousescojela. en tu almacen!");
             } else {
                 if($reward==true) {
-                $pl->sendMessage(TE::RED."Que mal ya tienes esta caja ".TE::GOLD.$box.TE::GREEN.", Toma estos 10 coins!");
+                $pl->sendMessage(TE::RED."You owned this cage ".TE::GOLD.$box.TE::GREEN.", You were refunded 10 coins!");
                 $this->manager->setCoins($pl->getName(),10);
                      } else {
-                $pl->sendMessage(TE::RED."Que mal ya tienes esta caja ".TE::GOLD.$box);
+                $pl->sendMessage(TE::RED."You have owned this already ".TE::GOLD.$box);
                          }
                 }
         }
@@ -82,7 +82,7 @@ $vote = $all[$data];
 if($this->manager->getCoins($pl->getName())>=$this->pricestore) {
 $this->addCageNew($pl,$vote);
 } else {
-    $pl->sendMessage(TE::RED."Que mal insuficiente dinero: ".TE::GOLD.$this->manager->getCoins($pl->getName()));
+    $pl->sendMessage(TE::RED."No money to buy this: ".TE::GOLD.$this->manager->getCoins($pl->getName()));
     }
 /*end code*/
 if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()]); }
@@ -93,7 +93,7 @@ if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()])
 		  if(!in_array($name,$load)) {
           $form->addButton(TE::BOLD."§f[NEW] ".strtoupper($name)."\n".TE::BOLD."§a[$".$this->pricestore."]§b•DISPONIBLE•",0,$urll);
           } else {
-              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[STORE]§6•YA LA DISPONES•",0,$urll);
+              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[STORE]§6•YOU ALREADY HAVE IT•",0,$urll);
               }
           $list[] =  $name;
 		 }
@@ -101,7 +101,7 @@ if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()])
 	     $form->sendToPlayer($pl);
 	     $this->listbox[$pl->getName()] = $list;
 	    } else {
-		$pl->sendMessage(TE::RED."No dispones cajas en la tienda aun!");
+		$pl->sendMessage(TE::RED."You don't have boxes in the store yet!");
 		}
 	}
 	
@@ -118,7 +118,7 @@ $all = $this->listbox[$pl->getName()] ?? "value";
 /*code*/
 $vote = $all[$data];
 $this->cagee[$pl->getName()] = $vote;
-$pl->sendMessage(TE::GREEN."[NEW]".TE::WHITE."Caja establisidad: ".TE::AQUA.$vote);
+$pl->sendMessage(TE::GREEN."[NEW]".TE::WHITE."Stablisity Box: ".TE::AQUA.$vote);
 $this->createMapPrivate($pl);
 /*end code*/
 if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()]); }
@@ -130,7 +130,7 @@ if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()])
 		  if(!in_array($name,$load)) {
           $form->addButton(TE::BOLD."§f[PRIVADA] ".strtoupper($name)."\n".TE::BOLD."§a[FREE]§3•DISPONIBLE•",0,$urll);
           } else {
-              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[BAYA]§6•YA LA DISPONES•",0,$urll);
+              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[BAYA]§6•YOU ALREADY HAVE IT•",0,$urll);
               }
           $list[] =  $name;
 		 }
@@ -138,7 +138,7 @@ if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()])
 	     $form->sendToPlayer($pl);
 	     $this->listbox[$pl->getName()] = $list;
 	    } else {
-		$pl->sendMessage(TE::RED."No hay cajas privadas aun!");
+		$pl->sendMessage(TE::RED."There is no private cages yet!");
 		}
 	}
 	
@@ -155,7 +155,7 @@ $all = $this->listbox[$pl->getName()] ?? "value";
 /*code*/
 $vote = $all[$data];
 $this->addCageNew($pl,$vote);
-$pl->sendMessage(TE::GREEN."[NEW]".TE::WHITE."Se te dio una caja muy especial:".TE::AQUA.$vote);
+$pl->sendMessage(TE::GREEN."[NEW]".TE::WHITE."You were given a very special box:".TE::AQUA.$vote);
 /*end code*/
 if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()]); }
 
@@ -166,15 +166,15 @@ if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()])
 		  if(!in_array($name,$load)) {
           $form->addButton(TE::BOLD."§f[PRIVADA] ".strtoupper($name)."\n".TE::BOLD."§a[FREE]§3•DISPONIBLE•",0,$urll);
           } else {
-              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[BAYA]§6•YA LA DISPONES•",0,$urll);
+              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[BAYA]§6•YOU ALREADY OWNED IT•",0,$urll);
               }
           $list[] =  $name;
 		 }
-	     $form->setTitle(TE::GOLD."§lCAJAS VIPs");
+	     $form->setTitle(TE::GOLD."§l VIPs");
 	     $form->sendToPlayer($pl);
 	     $this->listbox[$pl->getName()] = $list;
 	    } else {
-		$pl->sendMessage(TE::RED."No hay cajas privadas aun!");
+		$pl->sendMessage(TE::RED."There is no cage yet owned!");
 		}
 	}
 	
@@ -193,12 +193,12 @@ $vote = $all[$data];
 if($this->isMapUse($vote)==true) {
 $this->mapp[$pl->getName()] = $vote;
 $this->cagee[$pl->getName()] = $vote;
-$pl->sendMessage(TE::GREEN."[NEW]".TE::WHITE."Mapa establisido: ".TE::AQUA.$vote);
+$pl->sendMessage(TE::GREEN."[NEW]".TE::WHITE."Mapa stable: ".TE::AQUA.$vote);
 if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()]); }
 $this->createMapPrivate($pl);
 } else {
     if(isset($this->listbox[$pl->getName()])){ unset($this->listbox[$pl->getName()]); }
-    $pl->sendMessage(TE::GOLD."[ERROR]".TE::WHITE."Este mapa ya esta en juego: ".TE::RED.$vote);
+    $pl->sendMessage(TE::GOLD."[ERROR]".TE::WHITE."This map is in game: ".TE::RED.$vote);
     }
 /*end code*/
 
@@ -209,17 +209,17 @@ $this->createMapPrivate($pl);
 		  if($this->isMapUse($name)==true) {
 			$the = new Config($this->getDataFolder() . "TG/".$name.".yml",Config::YAML);
             $slots = $the->get("slots"); 
-			$form->addButton(TE::BOLD."§f[MAPA]§a ".strtoupper($name)."\n".TE::BOLD."§b[0/".$slots."]§d•DISPONIBLE•",0,$urll);
+			$form->addButton(TE::BOLD."§f[MAPA]§a ".strtoupper($name)."\n".TE::BOLD."§b[0/".$slots."]§d•FOUND•",0,$urll);
 			} else {
-              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[OFFINE]§6•ESTA EN USO•",0,$urll);
+              $form->addButton(TE::BOLD."§4".strtoupper($name)."\n".TE::BOLD."§c[OFFINE]§6•IS IN USE•",0,$urll);
               }
           $list[] =  $name;
 		 }
-	     $form->setTitle(TE::GOLD."§lMAPA LISTA");
+	     $form->setTitle(TE::GOLD."§lMAPA LIST");
 	     $form->sendToPlayer($pl);
 	     $this->listbox[$pl->getName()] = $list;
 	    } else {
-		$pl->sendMessage(TE::RED."No hay mapas privados aun!");
+		$pl->sendMessage(TE::RED."No private maps yet");
 		}
 	}
 	
