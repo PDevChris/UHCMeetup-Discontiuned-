@@ -29,7 +29,7 @@ $player->getArmorInventory()->clearAll();
  $player->removeAllEffects();
  foreach($lob->getPlayers() as $playersinarena){  
 $this->addSounds($playersinarena,"random.orb");
- $playersinarena->sendMessage("§8[§7JOIN-GAME§8][".$sl."]".TE::WHITE."» ".TE::GREEN.$player->getName().TE::GRAY." joined the game ".TE::WHITE."(".$onlin."/".$slotlvl.")"); }
+ $playersinarena->sendMessage("§8[§7JOIN-GAME§8][".$sl."]".TE::WHITE."» ".TE::GREEN.$player->getName().TE::YELLOW." joined the game ".TE::WHITE."(".$onlin."/".$slotlvl.")"); }
  $player->setFood(20);
  $player->addTitle(TE::AQUA.TE::BOLD."JOINED",TE::WHITE."has entered the game",20,40,20);
  $player->setHealth(20);
@@ -65,11 +65,11 @@ $this->addSounds($playersinarena,"random.orb");
 					     $this->joinSW($pl,$online);
 					     break;
 					  } else {
-                    $pl->sendTip("§f[SW-SOLO]§6 Buscando partida espere!");
+                    $pl->sendTip("§f[SW-SOLO]§6 Looking match...!");
                        }
 				   }
                 } else {
-                    $pl->sendMessage("§c[ERROR]§6 no hay mapas disponibles");
+                    $pl->sendMessage("§c[ERROR]§6 No maps found");
                     }
            }
          
@@ -86,7 +86,7 @@ $this->addSounds($playersinarena,"random.orb");
             break;
             case 2:
             if($this->isCreate($player)==true) {
-                $player->sendMessage("§8[§cERROR§8]§f Ya creastes una arena privada!");
+                $player->sendMessage("§8[§cERROR§8]§f You made a arena!");
                 } else {
             $this->loadPrivateMap($player);
             }
@@ -149,11 +149,11 @@ $this->addSounds($playersinarena,"random.orb");
 		$maps->set("LIST",$up);
 		$maps->save();
 		   if(isset($this->mapp[$player->getName()])) {
-            $player->sendMessage("§8[§6!§8]§f has creado este codigo privado!§6 ".$hack);
-			$player->sendMessage("§8[§6!§8]§fEl codigo dura asta que te salgas del servidor!");
-			$player->sendMessage("§8[§6!§8]§fEl codigo dura asta que se acabe la partida!");
-			$player->sendMessage("§8[§6!§8]§fUna vez iniciado el juego ya no podran participar!");
-			$player->sendMessage("§8[§6!§8]§fPodras iniciar la partida con el item reloj!");
+            $player->sendMessage("§8[§6!§8]§f you've created this private code§6 ".$hack);
+			$player->sendMessage("§8[§6!§8]§fThe hard code just gets off the server.!");
+			$player->sendMessage("§8[§6!§8]§fThe hard code is over the game!");
+			$player->sendMessage("§8[§6!§8]§Once the game has started you will no longer be able to participate!");
+			$player->sendMessage("§8[§6!§8]§fYou can start the game with the clock item");
 			
 			         unset($this->mapp[$player->getName()]);
 			unset($this->cagee[$player->getName()]);
@@ -162,20 +162,20 @@ $this->addSounds($playersinarena,"random.orb");
 				
 			   unset($this->mapp[$player->getName()]);
 			unset($this->cagee[$player->getName()]);
-				$player->sendMessage("§8[§cERROR§8]§f Lo sentimos este codigo ya existe!");
+				$player->sendMessage("§8[§cERROR§8]§f Sorry this code already exists!");
 				        }
 			        } else {
 			
 			   unset($this->mapp[$player->getName()]);
 			unset($this->cagee[$player->getName()]);
-				$player->sendMessage("§8[§cERROR§8]§f Lo sentimos este mapa ya esta en uso, busca uno nuevo!");
+				$player->sendMessage("§8[§cERROR§8]§f Sorry this map is in used try a new one");
 				}
 				} else {
-					$player->sendMessage("§8[§cERROR§8]§f Codigo muy corto. aslo mas largo!§6 maximo 7 letras");
+					$player->sendMessage("§8[§cERROR§8]§f Code too short max 7");
 					$this->createMapPrivate($player);
 					}
 			} else {
-					$player->sendMessage("§8[§cERROR§8]§f Codigo tiene numeros, eliminalos!§6 ");
+					$player->sendMessage("§8[§cERROR§8]§f Code has numbers, remove them!§6 ");
 					}
 			});
 		$form->setTitle(TE::BOLD . "§6CREATE CODE MAP");
@@ -280,7 +280,7 @@ $this->addSounds($playersinarena,"random.orb");
 			}
 			$code = $result[0] ?? false;
 			if($code==false) {
-				$player->sendMessage("§c[ERROR]§6 No has puesto ningun codigo");
+				$player->sendMessage("§c[ERROR]§6 You didnt put a code");
 				} else if($this->isCodeValid($result)==true) {
 					$config = new Config($this->getDataFolder()."/config.yml", Config::YAML);
 					$world = new Config($this->getDataFolder()."DATA/".$result.".yml", Config::YAML);
@@ -292,7 +292,7 @@ $this->addSounds($playersinarena,"random.orb");
 				      $slots = $the->get("slots"); 
 				     $counter = $this->manager->hasArenaCount($map) ?? 0; 
 				if($counter>=$slots) {
-					$player->sendMessage("§6[FULL]§f Lugares completos ,intenta con otro! ");
+					$player->sendMessage("§6[FULL]§f Games are full. ");
 					} else {
 						
 		            $this->joinSW($player,$map,$result);
@@ -308,10 +308,10 @@ $this->addSounds($playersinarena,"random.orb");
 $playersinarena->sendMessage(Settings::GAME_PREFIX.TE::WHITE." new (spectator) ".TE::GRAY.$player->getNameTag().TE::AQUA." He joined the game"); }
 			      }
                } else {
-               	$player->sendMessage("§c[ERROR]§6 Este codigo no existe!");
+               	$player->sendMessage("§c[ERROR]§6 This code is in use!");
                	}
            });
-		$form->setTitle(TE::BOLD . "§9UNETE PRIVADO");
+		$form->setTitle(TE::BOLD . "§9JOIN PRIVATE");
 		$form->addInput("here put the code!");
 		$form->sendToPlayer($player);
 		}
