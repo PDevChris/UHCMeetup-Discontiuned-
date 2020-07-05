@@ -149,13 +149,13 @@ $fire = $this->plugin->manager->loadKit($player->getName(),"NOFALL");
               	    $this->plugin->manager->kickGame($player->getName(),$player->getLevel()->getFolderName());
              	     $event->setCancelled();
              foreach ($player->getLevel()->getPlayers() as $pl) {
-                      $pl->sendMessage(TE::RED.$player->getName().TE::GOLD." Ha besado el suelo muy duro"); }
+                      $pl->sendMessage(TE::RED.$player->getName().TE::GOLD." He's kissed the ground really hard."); }
 				      $player->setMaxHealth(20);
                       $player->setHealth(20);
                       $player->setFood(20);
                       $this->plugin->manager->setPlayerSpec($player->getName(),$player->getLevel()->getFolderName());
                       $this->plugin->manager->setLost($player->getName());
-				      $player->sendTip(TE::RED."Has perdido");
+				      $player->sendTip(TE::RED."YOU LOST");
 				      
                        }
              }
@@ -276,7 +276,7 @@ $fire = $this->plugin->manager->loadKit($player->getName(),"NOFALL");
 
                       foreach ($entity->getLevel()->getPlayers() as $pl) {
 $this->plugin->addSounds($pl,"mob.fox.death");
-                      $pl->sendMessage(TE::RED.$damager->getName().TE::WHITE." Ha asesinado ".TE::GOLD.$player->getName()); }
+                      $pl->sendMessage(TE::RED.$damager->getName().TE::WHITE." Has killed ".TE::GOLD.$player->getName()); }
 
 
 				      $entity->setMaxHealth(20);
@@ -314,7 +314,7 @@ $this->plugin->addSounds($pl,"mob.fox.death");
 				      $damager->addTitle("  ",TE::BOLD.TE::GOLD."+1 Kill",20,40,20);
 
 
-				      $entity->sendTip(TE::BOLD.TE::GOLD." Suerte para la proxima");
+				      $entity->sendTip(TE::BOLD.TE::GOLD." Luck for next arena");
 
 
                      } 
@@ -374,7 +374,7 @@ $this->plugin->addSounds($pl,"mob.fox.death");
             	if(isset($players2[$player->getName()])) {
 
 
-            	$player->sendTip(TE::RED."Has caido al vacio");
+            	$player->sendTip(TE::RED."You've fallen into the void");
 
 
                 $spawn = $config->get($level."Lobby");
@@ -408,7 +408,7 @@ $this->plugin->addSounds($pl,"mob.fox.death");
             	if(isset($players2[$player->getName()])) {
 
 
-            	$player->sendTip(TE::RED."Has vaido al vicio xd");
+            	$player->sendTip(TE::RED."You have gone to vice xd");
 
 
                 $spawn = $config->get($level."Lobby");
@@ -442,8 +442,7 @@ $this->plugin->addSounds($pl,"mob.fox.death");
 
              foreach ($player->getLevel()->getPlayers() as $pl) {
 
-
-                      $pl->sendMessage(TE::RED.$player->getName().TE::GOLD." Ha caido vacio"); }
+                      $pl->sendMessage(TE::RED.$player->getName().TE::GOLD." It's gone empty."); }
 
 
 				      $player->setMaxHealth(20);
@@ -719,7 +718,7 @@ public function noDrops(PlayerDropItemEvent $ev) {
 
                       foreach ($entity->getLevel()->getPlayers() as $pl) {
                      $this->plugin->addSounds($pl,"mob.fox.aggro");
-                      $pl->sendMessage(TE::GOLD.$damager->getName().TE::WHITE." Ha asesinado con flechas ah ".TE::RED.$entity->getName()); }
+                      $pl->sendMessage(TE::GOLD.$damager->getName().TE::WHITE." was killed by arrows ".TE::RED.$entity->getName()); }
 
 
 				      $entity->setMaxHealth(20);
@@ -757,7 +756,7 @@ public function noDrops(PlayerDropItemEvent $ev) {
 				      $damager->addTitle("  ",TE::BOLD.TE::GOLD."+1 Kill",20,40,20);
 
 
-				      $entity->sendTip(TE::BOLD.TE::GOLD." Suerte para la proxima");
+				      $entity->sendTip(TE::BOLD.TE::GOLD." Luck for next arena");
 
 
 				
@@ -834,7 +833,7 @@ public function noDrops(PlayerDropItemEvent $ev) {
                       $this->plugin->manager->kickChest($entity);
                       $entity->getLevel()->addParticle(new DestroyBlockParticle($entity->add(0,0,0), Block::get(152)));
                       $this->plugin->manager->setLost($entity->getName());
-				      $entity->sendTip(TE::BOLD.TE::GOLD." Suerte para la proxima");
+				      $entity->sendTip(TE::BOLD.TE::GOLD." Luck for next arena");
                      } 
                      
                      }
