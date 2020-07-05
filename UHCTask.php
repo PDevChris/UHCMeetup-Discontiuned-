@@ -423,7 +423,7 @@ $config->set($arena."NEXT",80);
                                 $this->plugin->manager->setKitArmor($pl,$kit);
                                 $pl->addTitle(" §l§aFIGHT","§l§dBe the first to win!!",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.pillager.celebrate");
-                                $pl->sendMessage("§l§c[UHC-MEETUP]§r §6cada minuto cambia de borde atento!");
+                                $pl->sendMessage("§l§c[UHC-MEETUP]§r §6Every minute changes edge attentively!");
                              }
                         } 
 
@@ -539,7 +539,7 @@ $config->set($arena."NEXT",80);
 
 
 						     $config->set($arena."PlayTime", Settings::TIME_START_3);
-$config->set($arena."BORDE",100);
+$config->set($arena."BORDER",100);
 $config->set($arena."NEXT",80);
 
 						     $config->save();
@@ -669,7 +669,7 @@ if($start==60*9+5 || $start==60*9+4 || $start==60*9+3 || $start==60*9+2 || $star
                             
                             if($start==60*6-2) { 
                             foreach($players as $pl) {
-                                $pl->sendTip("§l§cYA NO HAY BORDES");
+                                $pl->sendTip("§l§cNO MORE BORDER");
                                 $this->plugin->addSounds($pl,"mob.villager.no");
                                 }
                             }
@@ -778,7 +778,7 @@ $pl->setGameMode(2);
 
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
-$config->set($arena."BORDE",100);
+$config->set($arena."BORDER",100);
 $config->set($arena."NEXT",80);
                         $config->save();
 
