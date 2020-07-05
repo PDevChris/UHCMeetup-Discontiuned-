@@ -212,12 +212,12 @@ public function addOnline(string $name) : void {
                 switch($data) {
             case 0:
             $this->manager->addKit($player->getName(),"FIRELESS");
-            $player->sendMessage("§l§8[§a+§8]§r§6Has seleccionado el Kit:§6 fireless");
+            $player->sendMessage("§l§8[§a+§8]§r§6Has chosen el Kit:§6 fireless");
             $this->addSounds($player,"random.shulkerboxopen");
             break;
             case 1:
             $this->manager->addKit($player->getName(),"NOFALL");
-            $player->sendMessage("§l§8[§a+§8]§r§6Has seleccionado el Kit:§6 nofall");
+            $player->sendMessage("§l§8[§a+§8]§r§6Has chosen el Kit:§6 nofall");
             $this->addSounds($player,"random.shulkerboxopen");
             break;
             
