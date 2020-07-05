@@ -132,7 +132,7 @@ $this->plugin->setKitU($player);
                         $this->plugin->addSounds($loss,"item.trident.return");
                         $loss->sendMessage("§8[§7GAME-START§8]".TE::WHITE."»by ".TE::GREEN.$player->getName().TE::GRAY." Game started preparations in ".TE::AQUA." 20sg"); }
                         } else {
-                            $player->sendMessage("§c[ERROR]§6 no se puede iniciar si solo hay un jugador!");
+                            $player->sendMessage("§c[ERROR]§6 Cannot start without a player!");
                             }
 					}
 	       }  
@@ -156,12 +156,12 @@ public function onInv(InventoryTransactionEvent $e): void{
                     switch($act->getSourceItem()->getId()){
                         case Item::BLAZE_ROD:
                         $this->plugin->manager->addKit($player->getName(),"FIRELESS");
-                        $player->sendMessage("§l§8[§a+§8]§r§6Has seleccionado el Kit:§6 firelees");
+                        $player->sendMessage("§l§8[§a+§8]§r§6Have chosen Kit:§6 firelees");
                         $this->plugin->addSounds($player,"random.shulkerboxopen");
                             break;
                         case Item::EMERALD;
                         $this->plugin->manager->addKit($player->getName(),"NOFALL");
-                        $player->sendMessage("§l§8[§a+§8]§r§6Has seleccionado el Kit:§6 nofall");
+                        $player->sendMessage("§l§8[§a+§8]§r§6Have chosen Kit:§6 nofall");
                         $this->plugin->addSounds($player,"random.shulkerboxopen");
                             break;
                             default:
