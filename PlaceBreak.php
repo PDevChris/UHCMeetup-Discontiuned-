@@ -157,22 +157,22 @@ class PlaceBreak implements Listener {
 		if($x > $border+1) {
           	$player->teleport(new Vector3($border-5,70,$player->getZ()));
           	$player->setMotion(new Vector3(-5,0,0));
-          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ sᴀʟɢᴀs ᴅᴇʟ ʙᴏʀᴅᴇ", 20,40,20);
+          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ GOING OUT OF THE SERVER", 20,40,20);
           }
           if($x < -$border-1) {
           	$player->teleport(new Vector3($border+5,70,$player->getZ()));
           	$player->setMotion(new Vector3(5,0,0));
-          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ sᴀʟɢᴀs ᴅᴇʟ ʙᴏʀᴅᴇ", 20,40,20);
+          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ GOING OUT OF THE BORDER", 20,40,20);
           }
           if($z > $border+1) {
           	$player->teleport(new Vector3($border,70,$player->getZ()-5));
           	$player->setMotion(new Vector3(0,0,-5));
-          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ sᴀʟɢᴀs ᴅᴇʟ ʙᴏʀᴅᴇ", 20,40,20);
+          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ GOING OUT OF THE BORDER", 20,40,20);
           }
           if($z < -$border-1) {
           $player->teleport(new Vector3($border,70,$player->getZ()+5));
           	$player->setMotion(new Vector3(0,0,5));
-          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ sᴀʟɢᴀs ᴅᴇʟ ʙᴏʀᴅᴇ", 20,40,20);
+          $player->addTitle("§c§lᴄᴜɪᴅᴀᴅᴏ!","§6§lɴᴏ GOING OUT OF THE BORDER", 20,40,20);
           }
 		}
 	}
