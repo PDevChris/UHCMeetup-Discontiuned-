@@ -93,7 +93,7 @@ class UHCM extends PluginBase implements Listener {
         @mkdir($this->getDataFolder()."CAGE/");
         @mkdir($this->getDataFolder()."DATA/");
         @mkdir($this->getDataFolder()."USERS/");
-        $this->getServer()->getLogger()->info("§a[UHC-MEETUP-ONLINE] Si sirve we :v");
+        $this->getServer()->getLogger()->info("§a[UHC-RUN-ONLINE] Si sirve we :v");
         $this->getServer()->getPluginManager()->registerEvents($this ,$this);  
         $this->manager->setWorlsGame();
         foreach($this->skinsNPC as $file){
