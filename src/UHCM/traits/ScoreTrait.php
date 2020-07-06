@@ -1,4 +1,4 @@
-§1<?php
+<?php
 namespace UHCM\traits;
 
 use pocketmine\utils\TextFormat as TE;
