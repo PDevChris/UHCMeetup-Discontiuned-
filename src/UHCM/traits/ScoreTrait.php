@@ -11,7 +11,7 @@ trait ScoreTrait {
     
     public function runningTo(Player $pl,int $time,string $arena) {
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d".TE::DARK_BLUE."U".TE::DARK_BLUE."HC".TE::DARK_BLUE."]"." ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d_".TE::DARK_BLUE."U".TE::DARK_BLUE."HC".TE::DARK_BLUE."]"." ");
 $api->setLine($pl, 0,"                   ".TE::BLUE);
 $api->setLine($pl, 1, " §1■■■■■■■■■■■■■■■■■■");	    
 $api->setLine($pl, 2, TE::BOLD.TE::DARK_BLUE." Map to play: ");
@@ -20,7 +20,7 @@ $api->setLine($pl, 4,"                     ".TE::BLUE);
 $api->setLine($pl, 5, TE::BOLD.TE::DARK_BLUE." Starting in: ".TE::AQUA.$time);
 $api->setLine($pl, 6,"                  ".TE::BLUE);
 $api->setLine($pl, 7, " §1■■■■■■■■■■■■■■■■■■");	  
-$api->setLine($pl, 8, " §1wcserver.goandplay.fun ");
+$api->setLine($pl, 8, " §1playwcserver.ddns.net ");
 $api->getObjectiveName($pl);
 }
 
@@ -30,7 +30,7 @@ public function runningStart(Player $pl,string $arena,int $live,int $time) {
  $borde = $this->plugin->manager->getBorde($arena);
  $next = $this->plugin->manager->getNext($arena);
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d".TE::DARK_BLUE."U".TE::DARK_BLUE."H".TE::DARK_BLUE."C]"." ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d_".TE::DARK_BLUE."U".TE::DARK_BLUE."H".TE::DARK_BLUE."C]"." ");
 $api->setLine($pl, 0,"                       ".TE::BLUE);
 $api->setLine($pl, 10, " §1■■■■■■■■■■■■■■■■■■ ");
 $api->setLine($pl, 1, TE::BOLD.TE::DARK_BLUE." Map: ".TE::AQUA.$arena);
@@ -43,7 +43,7 @@ $api->setLine($pl, 7, TE::BOLD.TE::DARK_BLUE." Border: ".TE::AQUA.$borde);
 $api->setLine($pl, 8, TE::BOLD.TE::DARK_BLUE." Next ".TE::AQUA.$next);
 $api->setLine($pl, 9,"                  ".TE::BLUE);
 $api->setLine($pl, 10, "§1 ■■■■■■■■■■■■■■■■■■ ");
-$api->setLine($pl, 10, " §1wcserver.goandplay.fun ");
+$api->setLine($pl, 10, " §1playwcserver.ddns.net ");
 $api->getObjectiveName($pl);
 }
     
@@ -62,7 +62,7 @@ $maxp = $p == null ? 0 : max($p);
 $topp = array_search($maxp, $p) == null ? TE::RED."lugar disponible" : array_search($maxp, $p);
  return TE::GOLD.$topp.TE::WHITE.": ".TE::YELLOW.$maxp;
 	} else {
-		return "sin tops";
+		return "no tops winner yet";
 		}
 }
     
