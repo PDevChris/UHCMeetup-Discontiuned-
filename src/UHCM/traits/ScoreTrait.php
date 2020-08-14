@@ -11,7 +11,7 @@ trait ScoreTrait {
     
     public function runningTo(Player $pl,int $time,string $arena) {
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."UH".TE::DARK_BLUE."C".TE::DARK_BLUE."_".TE::DARK_BLUE."MEE".TE::DARK_BLUE."TUP".TE::DARK_BLUE."]"." ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d".TE::DARK_BLUE."U".TE::DARK_BLUE."HC".TE::DARK_BLUE."]"." ");
 $api->setLine($pl, 0,"                   ".TE::BLUE);
 $api->setLine($pl, 1, " §1■■■■■■■■■■■■■■■■■■");	    
 $api->setLine($pl, 2, TE::BOLD.TE::DARK_BLUE." Map to play: ");
@@ -30,7 +30,7 @@ public function runningStart(Player $pl,string $arena,int $live,int $time) {
  $borde = $this->plugin->manager->getBorde($arena);
  $next = $this->plugin->manager->getNext($arena);
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."UH".TE::DARK_BLUE."C".TE::DARK_BLUE."_".TE::DARK_BLUE."MEE".TE::DARK_BLUE."T".TE::DARK_BLUE."UP]"." ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d".TE::DARK_BLUE."U".TE::DARK_BLUE."H".TE::DARK_BLUE."C]"." ");
 $api->setLine($pl, 0,"                       ".TE::BLUE);
 $api->setLine($pl, 10, " §1■■■■■■■■■■■■■■■■■■ ");
 $api->setLine($pl, 1, TE::BOLD.TE::DARK_BLUE." Map: ".TE::AQUA.$arena);
