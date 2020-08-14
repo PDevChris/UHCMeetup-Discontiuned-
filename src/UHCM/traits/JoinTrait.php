@@ -29,7 +29,7 @@ $player->getArmorInventory()->clearAll();
  $player->removeAllEffects();
  foreach($lob->getPlayers() as $playersinarena){  
 $this->addSounds($playersinarena,"random.orb");
- $playersinarena->sendMessage("§8[§7JOIN-GAME§8][".$sl."]".TE::WHITE."» ".TE::GREEN.$player->getName().TE::YELLOW." joined the game ".TE::WHITE."(".$onlin."/".$slotlvl.")"); }
+ $playersinarena->sendMessage("§8[§7JOIN-GAME§8][".$sl."]".TE::WHITE."» ".TE::YELLOW.$player->getName().TE::YELLOW." joined the game ".TE::RED."(".$onlin."/".$slotlvl.")"); }
  $player->setFood(20);
  $player->addTitle(TE::AQUA.TE::BOLD."JOINED",TE::WHITE."has entered the game",20,40,20);
  $player->setHealth(20);
@@ -96,8 +96,8 @@ $this->addSounds($playersinarena,"random.orb");
                 } } });
           $online = $this->getOnline();
           $form->setTitle("§3§lMODO SOLO");
-          $form->addButton("§l§2UHC_M§8-§aSOLO\n§r§8Connected players:§b ".$online);
-          $form->addButton("§l§2UHC_M-§aCODE\n§r§8Private rooms");
+          $form->addButton("§l§2SpeedUHC§8-§aSOLO\n§r§8Connected players:§b ".$online);
+          $form->addButton("§l§2SpeedUHC-§aCODE\n§r§8Private rooms");
           /*
           if($player->hasPermission("create.sw.private")) {
           $form->addButton("§l§2UHC_M§8-§aROOM\n§r§8Create room");
