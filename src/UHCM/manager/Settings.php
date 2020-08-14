@@ -85,7 +85,7 @@ class Settings {
 
 
 
-	const GAME_PREFIX = TE::WHITE."[".TE::AQUA."UHC_MEETUP".TE::WHITE."]";
+	const GAME_PREFIX = TE::WHITE."[".TE::AQUA."Speed UHC".TE::WHITE."]";
 
 
 
@@ -182,7 +182,7 @@ class Settings {
 
 
 
-	const SIGN_PREFIX = TE::BOLD.TE::DARK_AQUA."Uhc_Meetup";
+	const SIGN_PREFIX = TE::BOLD.TE::DARK_AQUA."Speed UHC";
 
 
 
@@ -212,7 +212,7 @@ class Settings {
 
 	const SIGN_PREFIX_END = TE::BOLD.TE::LIGHT_PURPLE."Uhc";
 
-	const BOSS_COLOR_1 = TE::BOLD.TE::GREEN."U".TE::DARK_GREEN."H".TE::GREEN."C".TE::DARK_GREEN."_".TE::GREEN."MEE".TE::DARK_GREEN."TU".TE::GREEN."P";
+	const BOSS_COLOR_1 = TE::BOLD.TE::GREEN."Spe".TE::DARK_GREEN."e".TE::GREEN."d".TE::DARK_GREEN."_".TE::GREEN."U".TE::DARK_GREEN."H".TE::GREEN."C";
 
 
 
@@ -414,108 +414,22 @@ public function loadKit(string $name,string $damage) : bool {
     }
     
     public function setKitArmor(Player $nn,string $kit) : void {
-        $bow = Item::get(Item::BOW, 0, 1);
-        $sword = Item::get(Item::DIAMOND_SWORD, 0, 1);
-        $hel = Item::get(Item::DIAMOND_HELMET, 0, 1);
-        $pec = Item::get(Item::DIAMOND_CHESTPLATE, 0, 1);
-        $legg = Item::get(Item::DIAMOND_LEGGINGS, 0, 1);
-        $botts = Item::get(Item::DIAMOND_BOOTS, 0, 1);
-        $pick = Item::get(Item::DIAMOND_PICKAXE, 0, 1);
-        $axe = Item::get(Item::DIAMOND_AXE, 0, 1);
+        $pec = Item::get(Item::LEATHER_CHESTPLATE, 0, 1);
         
     switch($kit) {
         case "NOFALL":
-
-        $prote = new EnchantmentInstance(Enchantment::getEnchantment(0), rand(2,3));
-        $filo = new EnchantmentInstance(Enchantment::getEnchantment(9),mt_rand(1,2));
-        $power = new EnchantmentInstance(Enchantment::getEnchantment(19), mt_rand(1,2));
-        
-        $effe = new EnchantmentInstance(Enchantment::getEnchantment(15), mt_rand(1,3));
-         $hel->addEnchantment($prote);
         $pec->addEnchantment($prote);
-        $legg->addEnchantment($prote);
-        $botts->addEnchantment($prote);
         
-        $bow->addEnchantment($power);
-        $sword->addEnchantment($filo);
-        $axe->addEnchantment($effe);
-        $pick->addEnchantment($effe);
-        
-        
-          $nn->getArmorInventory()->setHelmet($hel);
-          $nn->getArmorInventory()->setChestplate($pec);
-          $nn->getArmorInventory()->setLeggings($legg);
-          $nn->getArmorInventory()->setBoots($botts);
-          $nn->getInventory()->setItem(0, $sword);
           $nn->getInventory()->setItem(1, Item::get(Item::GOLDEN_APPLE, 0, 10));
           $nn->getInventory()->setItem(2, Item::get(Item::BREAD, 0, 10));
-          $nn->getInventory()->setItem(3, $bow);
-          $nn->getInventory()->setItem(4, Item::get(Item::ARROW, 0, 15));
-          $nn->getInventory()->setItem(5, Item::get(325, 10, 1));
-          $nn->getInventory()->setItem(6, Item::get(325, 8, 1));
-          $nn->getInventory()->setItem(7, $pick);
-          $nn->getInventory()->setItem(8, $axe);
         break;
         case "FIRELESS":
-        $prote = new EnchantmentInstance(Enchantment::getEnchantment(0), rand(2,3));
-        $filo = new EnchantmentInstance(Enchantment::getEnchantment(9),mt_rand(1,2));
-        $power = new EnchantmentInstance(Enchantment::getEnchantment(19), mt_rand(1,2));
-        
-        $effe = new EnchantmentInstance(Enchantment::getEnchantment(15), mt_rand(1,3));
-        $hel->addEnchantment($prote);
-        $pec->addEnchantment($prote);
-        $legg->addEnchantment($prote);
-        $botts->addEnchantment($prote);
-        
-        $bow->addEnchantment($power);
-        $sword->addEnchantment($filo);
-        $axe->addEnchantment($effe);
-        $pick->addEnchantment($effe);
-        
-        
-          $nn->getArmorInventory()->setHelmet($hel);
-          $nn->getArmorInventory()->setChestplate($pec);
-          $nn->getArmorInventory()->setLeggings($legg);
-          $nn->getArmorInventory()->setBoots($botts);
-          $nn->getInventory()->setItem(0, $sword);
-          $nn->getInventory()->setItem(1, Item::get(Item::GOLDEN_APPLE, 0, 5));
-          $nn->getInventory()->setItem(2, Item::get(Item::BREAD, 0, 15));
+		    
           $nn->getInventory()->setItem(3, $bow);
           $nn->getInventory()->setItem(4, Item::get(Item::ARROW, 0, 15));
-          $nn->getInventory()->setItem(5, Item::get(325, 10, 1));
-          $nn->getInventory()->setItem(6, Item::get(325, 8, 1));
-          $nn->getInventory()->setItem(7, $pick);
-          $nn->getInventory()->setItem(8, $axe);
         break;
         default:
-        $prote = new EnchantmentInstance(Enchantment::getEnchantment(0), rand(2,3));
-        $filo = new EnchantmentInstance(Enchantment::getEnchantment(9),mt_rand(1,2));
-        $power = new EnchantmentInstance(Enchantment::getEnchantment(19), mt_rand(1,2));
-        $effe = new EnchantmentInstance(Enchantment::getEnchantment(15), mt_rand(1,3));
-         $hel->addEnchantment($prote);
         $pec->addEnchantment($prote);
-        $legg->addEnchantment($prote);
-        $botts->addEnchantment($prote);
-        
-        $bow->addEnchantment($power);
-        $sword->addEnchantment($filo);
-        $axe->addEnchantment($effe);
-        $pick->addEnchantment($effe);
-        
-        
-          $nn->getArmorInventory()->setHelmet($hel);
-          $nn->getArmorInventory()->setChestplate($pec);
-          $nn->getArmorInventory()->setLeggings($legg);
-          $nn->getArmorInventory()->setBoots($botts);
-          $nn->getInventory()->setItem(0, $sword);
-          $nn->getInventory()->setItem(1, Item::get(Item::GOLDEN_APPLE, 0, 7));
-          $nn->getInventory()->setItem(2, Item::get(Item::BREAD, 0, 25));
-          $nn->getInventory()->setItem(3, $bow);
-          $nn->getInventory()->setItem(4, Item::get(Item::ARROW, 0, 10));
-          $nn->getInventory()->setItem(5, Item::get(325, 10, 1));
-          $nn->getInventory()->setItem(6, Item::get(325, 8, 1));
-          $nn->getInventory()->setItem(7, $pick);
-          $nn->getInventory()->setItem(8, $axe);
         break;
         }
     }
@@ -609,7 +523,7 @@ public function setBorde(int $borde,string $arena,int $altura = 0,int $x = 0,int
 
 
 
-		   		return "este jugador ya existe";
+		   		return "This player exists";
 
 
 
@@ -784,7 +698,7 @@ $maxp = $p == null ? 0 : max($p);
 $topp = array_search($maxp, $p) == null ? TE::RED."lugar disponible" : array_search($maxp, $p);
  return TE::GOLD.$topp.TE::WHITE.": ".TE::YELLOW.$maxp;
 	} else {
-		return "sin tops";
+		return "No tops";
 		}
 }
 
@@ -1383,11 +1297,11 @@ $this->delKit($pl->getName());
 
 
 
-               $this->plugin->getServer()->getLogger()->notice("§l§bTodos los mapas estan en funcionamiento!!"); 
+               $this->plugin->getServer()->getLogger()->notice("§l§bAll maps are full!!"); 
 
 
 
-             } else { $this->plugin->getServer()->getLogger()->notice("§l§cNo hay mapas en funcion!"); }
+             } else { $this->plugin->getServer()->getLogger()->notice("§l§cNo more maps!"); }
 
 
 
@@ -1507,8 +1421,8 @@ $online = $this->plugin->getServer()->getPlayer($vote);
 if($online!=null) {
 $this->delPlayer($online->getName(),$online->getLevel()->getFolderName());
 $online->teleport($this->plugin->getServer()->getDefaultLevel()->getSafeSpawn(),0,0);
-$online->sendMessage(TE::RED."[EXPULSADO] ".TE::GOLD."No cuentas con los requisitos!");
-$pl->sendMessage(TE::GREEN."[OKAY] ".TE::GOLD."Usuario: ".TE::RED.$vote.TE::GOLD." fue expulsado!");
+$online->sendMessage(TE::RED."[EXPELLED] ".TE::GOLD."No cuentas con los requisitos!");
+$pl->sendMessage(TE::GREEN."[OKAY] ".TE::GOLD."User: ".TE::RED.$vote.TE::GOLD." was expelled!");
 } else {
 	$pl->sendMessage(TE::RED."Jugador desconectado");
 	}
@@ -1520,7 +1434,7 @@ if(isset($this->dataspect[$pl->getName()])){ unset($this->dataspect[$pl->getName
 		$form->addButton(TE::BOLD.TE::WHITE.$names.TE::GREEN."\nExpulsar Jugador");
           $list[] =  $names;
 		 }
-	     $form->setTitle(TE::GOLD.TE::BOLD."JUGA".TE::YELLOW."DORES");
+	     $form->setTitle(TE::GOLD.TE::BOLD."PLAY".TE::YELLOW."ERS");
 	     $form->sendToPlayer($pl);
 	     $this->dataspect[$pl->getName()] = $list;
 	    } 
