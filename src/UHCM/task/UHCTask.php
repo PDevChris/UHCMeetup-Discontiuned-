@@ -423,7 +423,7 @@ $config->set($arena."NEXT",80);
                                 $this->plugin->manager->setKitArmor($pl,$kit);
                                 $pl->addTitle(" §l§aFIGHT","§l§dBe the first to win!!",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.pillager.celebrate");
-                                $pl->sendMessage("§l§c[UHC-MEETUP]§r §6Every minute changes edge attentively!");
+                                $pl->sendMessage("§l§c[Speed UHC]§r §6Every minute changes edge attentively!");
                              }
                         } 
 
@@ -490,7 +490,7 @@ $config->set($arena."NEXT",80);
 
                             if(isset($onlines[$player->getName()])) {
        
-                            $player->addTitle("§l§aCONGRATULATIONS","§r§6you won at UHC-MEETUP",20,40,20);
+                            $player->addTitle("§l§6VICTORY","§r§6you won at SpeedUHC",20,40,20);
                             //$this->plugin->addSounds($player,"mob.cat.beg");
                             
                             $core = $this->plugin->getServer()->getPluginManager()->getPlugin("Core");
@@ -511,7 +511,7 @@ $config->set($arena."NEXT",80);
 		                    $data->setCoins($name);
                $this->plugin->addSounds($player,"random.levelup");
 
-		                    $this->plugin->getServer()->broadcastMessage("§8» §f===§2§lUHC-MEETUP§r==="); 
+		                    $this->plugin->getServer()->broadcastMessage("§8» §f===§2§9SpeedUHC§r==="); 
 
 
                             $this->plugin->getServer()->broadcastMessage("§6Winner §8#1 §f".$player->getName()); 
