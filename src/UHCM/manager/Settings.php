@@ -428,9 +428,6 @@ public function loadKit(string $name,string $damage) : bool {
           $nn->getInventory()->setItem(3, $bow);
           $nn->getInventory()->setItem(4, Item::get(Item::ARROW, 0, 15));
         break;
-        default:
-        $pec->addEnchantment($prote);
-        break;
         }
     }
 	
