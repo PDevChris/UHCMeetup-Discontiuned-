@@ -11,16 +11,16 @@ trait ScoreTrait {
     
     public function runningTo(Player $pl,int $time,string $arena) {
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d_".TE::DARK_BLUE."U".TE::DARK_BLUE."HC".TE::DARK_BLUE."]"." ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."".TE::YELLOW."SPE".TE::YELLOW."E".TE::YELLOW."D".TE::YELLOW." U".TE::YELLOW."HC".TE::YELLOW.""." ");
 $api->setLine($pl, 0,"                   ".TE::BLUE);
-$api->setLine($pl, 1, " §1■■■■■■■■■■■■■■■■■■");	    
-$api->setLine($pl, 2, TE::BOLD.TE::DARK_BLUE." Map to play: ");
-$api->setLine($pl, 3, TE::AQUA."   ".$arena);
+$api->setLine($pl, 1, "");	    
+$api->setLine($pl, 2, TE::BOLD.TE::WHITE." Map: ");
+$api->setLine($pl, 3, TE::GREEN."   ".$arena);
 $api->setLine($pl, 4,"                     ".TE::BLUE);
-$api->setLine($pl, 5, TE::BOLD.TE::DARK_BLUE." Starting in: ".TE::AQUA.$time);
+$api->setLine($pl, 5, TE::BOLD.TE::WHITE." Starting in: ".TE::GREEN.$time);
 $api->setLine($pl, 6,"                  ".TE::BLUE);
-$api->setLine($pl, 7, " §1■■■■■■■■■■■■■■■■■■");	  
-$api->setLine($pl, 8, " §1playwcserver.ddns.net ");
+$api->setLine($pl, 7, "" );	  
+$api->setLine($pl, 8, " §eplaywcserver.ddns.net ");
 $api->getObjectiveName($pl);
 }
 
@@ -30,20 +30,20 @@ public function runningStart(Player $pl,string $arena,int $live,int $time) {
  $borde = $this->plugin->manager->getBorde($arena);
  $next = $this->plugin->manager->getNext($arena);
 $api = $this->plugin->score;
-$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."[".TE::DARK_BLUE."Spe".TE::DARK_BLUE."e".TE::DARK_BLUE."d_".TE::DARK_BLUE."U".TE::DARK_BLUE."H".TE::DARK_BLUE."C]"." ");
+$api->new($pl, $pl->getName(), " ".TE::BOLD.TE::DARK_BLUE."".TE::YELLOW."SPE".TE::YELLOW."E".TE::YELLOW."D".TE::YELLOW." U".TE::YELLOW."H".TE::YELLOW."C"." ");
 $api->setLine($pl, 0,"                       ".TE::BLUE);
-$api->setLine($pl, 10, " §1■■■■■■■■■■■■■■■■■■ ");
-$api->setLine($pl, 1, TE::BOLD.TE::DARK_BLUE." Map: ".TE::AQUA.$arena);
+$api->setLine($pl, 10, "");
+$api->setLine($pl, 1, TE::BOLD.TE::WHITE." Map: ".TE::GREEN.$arena);
 $api->setLine($pl, 2,"                     ".TE::BLUE);
-$api->setLine($pl, 3, TE::BOLD.TE::DARK_BLUE." Alive: ".TE::AQUA.$live);
-$api->setLine($pl, 4, TE::BOLD.TE::DARK_BLUE." Time: ".str_replace(TE::AQUA,TE::AQUA,$tt));
+$api->setLine($pl, 3, TE::BOLD.TE::WHITE." Alive: ".TE::GREEN.$live);
+$api->setLine($pl, 4, TE::BOLD.TE::WHITE." Time: ".str_replace(TE::GREEN,TE::GREEN,$tt));
 $api->setLine($pl, 5,"                         ".TE::BLUE);
-$api->setLine($pl, 6, TE::WHITE.TE::DARK_BLUE." Kills: §b".TE::AQUA.$kills);
-$api->setLine($pl, 7, TE::BOLD.TE::DARK_BLUE." Border: ".TE::AQUA.$borde);
-$api->setLine($pl, 8, TE::BOLD.TE::DARK_BLUE." Next ".TE::AQUA.$next);
+$api->setLine($pl, 6, TE::WHITE.TE::WHITE." Kills: §b".TE::GREEN.$kills);
+$api->setLine($pl, 7, TE::BOLD.TE::WHITE." Border: ".TE::GREEN.$borde);
+$api->setLine($pl, 8, TE::BOLD.TE::WHITE." Next ".TE::GREEN.$next);
 $api->setLine($pl, 9,"                  ".TE::BLUE);
-$api->setLine($pl, 10, "§1 ■■■■■■■■■■■■■■■■■■ ");
-$api->setLine($pl, 10, " §1playwcserver.ddns.net ");
+$api->setLine($pl, 10, "");
+$api->setLine($pl, 10, " §eplaywcserver.ddns.net ");
 $api->getObjectiveName($pl);
 }
     
