@@ -416,7 +416,7 @@ $config->set($arena."NEXT",80);
                         
 
                             if($start<=0) { 
-                                $this->plugin->manager->setBorde(99,$arena,60,0,-1,0,80,"BLUE");
+                                $this->plugin->manager->setBorde(99,$arena,60,0,-1,0,105,"BLUE");
                             foreach($players as $pl) {
                                 $pl->setImmobile(false);
                                 $kit = $this->plugin->manager->getKit($pl->getName());
@@ -539,8 +539,8 @@ $config->set($arena."NEXT",80);
 
 
 						     $config->set($arena."PlayTime", Settings::TIME_START_3);
-$config->set($arena."BORDER",100);
-$config->set($arena."NEXT",80);
+$config->set($arena."BORDER",125);
+$config->set($arena."NEXT",120);
 
 						     $config->save();
 
@@ -596,8 +596,8 @@ if($this->plugin->isArenaUse($arena)==true) {
 
                         $config->set($arena."PlayTime", Settings::TIME_START_3);
 
-$config->set($arena."BORDE",100);
-$config->set($arena."NEXT",80);
+$config->set($arena."BORDE",125);
+$config->set($arena."NEXT",120);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
 
@@ -778,8 +778,8 @@ $pl->setGameMode(2);
 
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
-$config->set($arena."BORDER",100);
-$config->set($arena."NEXT",80);
+$config->set($arena."BORDER",125);
+$config->set($arena."NEXT",120);
                         $config->save();
 
 
