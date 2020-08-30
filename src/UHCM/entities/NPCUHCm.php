@@ -95,7 +95,7 @@ public function entityBaseTick(int $tickDiff = 20) : bool{
 			$online = $on->getOnline();
 			$c = count($this->colors)-1;
 			$cc = $this->colors[rand(0,$c)];
-			$this->setNameTag(" §6§l||||§2Speed UHC§6§l|||| §r§f(beta.v1)\n §fONLINE: ".$cc.$online."\n ".$cc."TAP TO JOIN");
+			$this->setNameTag(" §6§l§eSpeed UHC §r§f(beta.v1)\n §fONLINE: ".$cc.$online."\n ".$cc."TAP TO JOIN");
 			}
 		return $hasUpdate;
 		} else {
