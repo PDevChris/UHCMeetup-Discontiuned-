@@ -404,7 +404,7 @@ $config->set($arena."NEXT",80);
                             $m = $start<=7 ? "§c".$start : "§6".$start;
 
 
-                            $pl->sendTip(" §aStarting  in: ".$m);
+                            $pl->sendTip(" §aStarting in: ".$m);
 
 
                             }
@@ -419,8 +419,6 @@ $config->set($arena."NEXT",80);
                                 $this->plugin->manager->setBorde(99,$arena,60,0,-1,0,105,"BLUE");
                             foreach($players as $pl) {
                                 $pl->setImmobile(false);
-                                $kit = $this->plugin->manager->getKit($pl->getName());
-                                $this->plugin->manager->setKitArmor($pl,$kit);
                                 $pl->addTitle(" §l§aFIGHT","§l§dBe the first to win!!",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.pillager.celebrate");
                                 $pl->sendMessage("§l§c[Speed UHC]§r §6Every minute changes edge attentively!");
@@ -490,7 +488,7 @@ $config->set($arena."NEXT",80);
 
                             if(isset($onlines[$player->getName()])) {
        
-                            $player->addTitle("§l§6VICTORY","§r§6you won at SpeedUHC",20,40,20);
+                            $player->addTitle("§l§6VICTORY","§r§7You were the last man standing",20,40,20);
                             //$this->plugin->addSounds($player,"mob.cat.beg");
                             
                             $core = $this->plugin->getServer()->getPluginManager()->getPlugin("Core");
