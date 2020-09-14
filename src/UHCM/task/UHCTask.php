@@ -189,7 +189,7 @@ class UHCTask extends Task {
                             $this->plugin->addSounds($pl,"note.chime",$start);
 
 
-                         $pl->addTitle(" ","§l§aREADY IN: ".$m,20,40,20);
+                         $pl->addTitle(" ","§l§aStarting in: ".$m,20,40,20);
 
 
                             } if($start==0) {
@@ -241,8 +241,8 @@ if($this->plugin->isArenaUse($arena)==true) {
 
 
                         $config->set($arena."PlayTime", Settings::TIME_START_3);
-$config->set($arena."NEXT",80);
-$config->set($arena."BORDE",100);
+$config->set($arena."NEXT",300);
+$config->set($arena."BORDE",125);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
 
@@ -376,8 +376,8 @@ if($this->plugin->isArenaUse($arena)==true) {
 
                         $config->set($arena."PlayTime", Settings::TIME_START_3);
 
-$config->set($arena."BORDE",100);
-$config->set($arena."NEXT",80);
+$config->set($arena."BORDE",125);
+$config->set($arena."NEXT",300);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
 
@@ -538,7 +538,7 @@ $config->set($arena."NEXT",80);
 
 						     $config->set($arena."PlayTime", Settings::TIME_START_3);
 $config->set($arena."BORDER",125);
-$config->set($arena."NEXT",120);
+$config->set($arena."NEXT",300);
 
 						     $config->save();
 
@@ -595,7 +595,7 @@ if($this->plugin->isArenaUse($arena)==true) {
                         $config->set($arena."PlayTime", Settings::TIME_START_3);
 
 $config->set($arena."BORDE",125);
-$config->set($arena."NEXT",120);
+$config->set($arena."NEXT",300);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
 
@@ -777,7 +777,7 @@ $pl->setGameMode(2);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
 $config->set($arena."BORDER",125);
-$config->set($arena."NEXT",120);
+$config->set($arena."NEXT",300);
                         $config->save();
 
 
