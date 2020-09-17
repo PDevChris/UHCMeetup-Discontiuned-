@@ -31,7 +31,7 @@ $player->getArmorInventory()->clearAll();
 $this->addSounds($playersinarena,"random.orb");
  $playersinarena->sendMessage("§8[§7JOIN-GAME§8][".$sl."]".TE::WHITE."» ".TE::YELLOW.$player->getName().TE::YELLOW." joined the game ".TE::RED."(".$onlin."/".$slotlvl.")"); }
  $player->setFood(20);
- $player->addTitle(TE::AQUA.TE::BOLD."JOINED",TE::WHITE."has entered the game",20,40,20);
+ $player->addTitle(TE::AQUA.TE::BOLD."WELCOME",TE::WHITE."You have entered the game",20,40,20);
  $player->setHealth(20);
  $this->getJoinItem($player);
  if($this->isArenaUse($mapa)==true) {
@@ -95,7 +95,7 @@ $this->addSounds($playersinarena,"random.orb");
                 return;
                 } } });
           $online = $this->getOnline();
-          $form->setTitle("§3§lMODO SOLO");
+          $form->setTitle("§3§lClick to join match");
           $form->addButton("§l§2SpeedUHC§8-§aSOLO\n§r§8Connected players:§b ".$online);
           $form->addButton("§l§2SpeedUHC-§aCODE\n§r§8Private rooms");
           /*
