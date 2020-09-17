@@ -1325,8 +1325,8 @@ $this->delKit($pl->getName());
                         $config->set($name. "ToStartime", self::TIME_TO_START_1);
 
 
-$config->set($name."BORDE",125);
-$config->set($name."NEXT",120);
+$config->set($name."BORDE",145);
+$config->set($name."NEXT",300);
                         $config->set($name. "TeleportTime", self::TIME_TELEPORT_2);
 
 
