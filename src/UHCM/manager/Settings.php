@@ -117,7 +117,7 @@ class Settings {
 
 
 
-	const TIME_START_3 = 60*10; // 10m finist game
+	const TIME_START_3 = 60*15; // 10m finist game
 
 
 
