@@ -242,7 +242,7 @@ if($this->plugin->isArenaUse($arena)==true) {
 
                         $config->set($arena."PlayTime", Settings::TIME_START_3);
 $config->set($arena."NEXT",300);
-$config->set($arena."BORDE",145);
+$config->set($arena."BORDE",125);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
 
@@ -376,7 +376,7 @@ if($this->plugin->isArenaUse($arena)==true) {
 
                         $config->set($arena."PlayTime", Settings::TIME_START_3);
 
-$config->set($arena."BORDE",145);
+$config->set($arena."BORDE",125);
 $config->set($arena."NEXT",300);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
@@ -537,7 +537,7 @@ $config->set($arena."NEXT",300);
 
 
 						     $config->set($arena."PlayTime", Settings::TIME_START_3);
-$config->set($arena."BORDER",145);
+$config->set($arena."BORDER",125);
 $config->set($arena."NEXT",300);
 
 						     $config->save();
@@ -594,7 +594,7 @@ if($this->plugin->isArenaUse($arena)==true) {
 
                         $config->set($arena."PlayTime", Settings::TIME_START_3);
 
-$config->set($arena."BORDE",145);
+$config->set($arena."BORDE",125);
 $config->set($arena."NEXT",300);
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
@@ -776,7 +776,7 @@ $pl->setGameMode(2);
 
                         $config->set($arena."EndTime", Settings::TIME_END_4);
 
-$config->set($arena."BORDER",145);
+$config->set($arena."BORDER",125);
 $config->set($arena."NEXT",300);
                         $config->save();
 
