@@ -172,8 +172,6 @@ public function addOnline(string $name) : void {
         $efficiency = Enchantment::getEnchantment(0);
         $efficiency1 = new EnchantmentInstance($efficiency, 1);
         $f->addEnchantment($efficiency1);
-        $f->setCustomName(TE::RED."RETURN TO");
-        $player->getInventory()->setItem(0, $s);
         $player->getInventory()->setItem(8, $f);
   }
   
