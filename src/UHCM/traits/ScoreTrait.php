@@ -43,7 +43,7 @@ $api->setLine($pl, 7, TE::BOLD.TE::WHITE." Border: ".TE::GREEN.$borde);
 $api->setLine($pl, 8, TE::BOLD.TE::WHITE." Next ".TE::GREEN.$next);
 $api->setLine($pl, 9,"                  ".TE::BLUE);
 $api->setLine($pl, 10, "");
-$api->setLine($pl, 10, " §eplaywcserver.ddns.net ");
+$api->setLine($pl, 11, " §eplaywcserver.ddns.net ");
 $api->getObjectiveName($pl);
 }
     
