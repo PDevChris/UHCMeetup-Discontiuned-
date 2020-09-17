@@ -601,7 +601,7 @@ $config->set($arena."NEXT",300);
 
 						$config->save(); } 
 
-if($start==60*9+5 || $start==60*9+4 || $start==60*9+3 || $start==60*9+2 || $start==60*9+1 ) { 
+if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $start==60*10+1 ) { 
     foreach($players as $pl) {
         $tt = $this->plugin->manager->setSegs($start);
                       $pl->addTitle(" ","§l§cNEW EDGE IN: §a".$tt,20,40,20);
@@ -633,7 +633,7 @@ if($start==60*9+5 || $start==60*9+4 || $start==60*9+3 || $start==60*9+2 || $star
                       }
     }
     
-                        if($start==60*9) { 
+                        if($start==60*10) { 
                         $this->plugin->manager->setBorde(80,$arena,60,0,-1,0,60,"GREEN");
                             foreach($players as $pl) {
                                 $pl->addTitle(" ","§l§cCHANGED EDGE: §680",20,40,20);
