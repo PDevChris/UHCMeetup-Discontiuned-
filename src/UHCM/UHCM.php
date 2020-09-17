@@ -168,13 +168,10 @@ public function addOnline(string $name) : void {
     
     
     public function getJoinItem(Player $player) {
-		$s = Item::get(Item::CHEST, 0, 1);
 		$f = Item::get(Item::STAINED_GLASS, 14, 1);
         $efficiency = Enchantment::getEnchantment(0);
         $efficiency1 = new EnchantmentInstance($efficiency, 1);
-        $s->addEnchantment($efficiency1);
         $f->addEnchantment($efficiency1);
-        $s->setCustomName(TE::DARK_GREEN."KITS");
         $f->setCustomName(TE::RED."RETURN TO");
         $player->getInventory()->setItem(0, $s);
         $player->getInventory()->setItem(8, $f);
@@ -200,7 +197,6 @@ public function addOnline(string $name) : void {
   
   public function removeItems(Player $pl) {
 		$pl->getInventory()->removeItem(Item::get(Item::STAINED_GLASS,14,1));
-		$pl->getInventory()->removeItem(Item::get(Item::CHEST,0,1));
 		$pl->getInventory()->removeItem(Item::get(Item::CLOCK,0,1));
 		$pl->getInventory()->removeItem(Item::get(Item::BOOK,0,1));
   }
