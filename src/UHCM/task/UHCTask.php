@@ -189,7 +189,7 @@ class UHCTask extends Task {
                             $this->plugin->addSounds($pl,"note.chime",$start);
 
 
-                         $pl->addTitle(" ","§l§aStarting in: ".$m,20,40,20);
+                         $pl->addTitle(" ","§l§eFightning in\n: ".$m,20,40,20);
 
 
                             } if($start==0) {
@@ -404,7 +404,7 @@ $config->set($arena."NEXT",300);
                             $m = $start<=7 ? "§c".$start : "§6".$start;
 
 
-                            $pl->sendTip(" §aSetting Up Match: ".$m);
+                            $pl->sendTip(" §aOpening Cages In: ".$m);
 
 
                             }
@@ -421,7 +421,7 @@ $config->set($arena."NEXT",300);
                                 $pl->setImmobile(false);
                                 $pl->addTitle(" §l§aFIGHT","§l§dBe the first to win!!",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.pillager.celebrate");
-                                $pl->sendMessage("§l§c[Speed UHC]§r §6Every minute changes edge attentively!");
+                                $pl->sendMessage("§l§c[Speed UHC]§r §6	After 5 mintues the border will change!");
                              }
                         } 
 
@@ -509,13 +509,13 @@ $config->set($arena."NEXT",300);
 		                    $data->setCoins($name);
                $this->plugin->addSounds($player,"random.levelup");
 
-		                    $this->plugin->getServer()->broadcastMessage("§8» §f===§2§9SpeedUHC§r==="); 
+		                    $this->plugin->getServer()->broadcastMessage("§8» §f===§2§aSpeedUHC§r==="); 
 
 
                             $this->plugin->getServer()->broadcastMessage("§6Winner §8#1 §f".$player->getName()); 
 
 
-                            $this->plugin->getServer()->broadcastMessage("§fWon the game in:§a ".$arena); 
+                            $this->plugin->getServer()->broadcastMessage("§6Won the game in:§a ".$arena); 
 
 
                             $this->plugin->getServer()->broadcastMessage("§8» §f==============="); }
