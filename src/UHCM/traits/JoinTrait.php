@@ -11,7 +11,7 @@ use UHCM\manager\Settings;
 trait JoinTrait {
     
     
-    public function joinSW(Player $player,string $mapa,string $code = "NOPOR7U7") : void {
+    public function joinSW(Player $player,string $mapa,string $code = "wcserveriscool") : void {
    $config = new Config($this->getDataFolder()."/config.yml", Config::YAML);
   $lob = $this->getServer()->getLevelByName($mapa);
  $levelArena = $this->getServer()->getLevelByName($mapa);
@@ -65,7 +65,7 @@ $this->addSounds($playersinarena,"random.orb");
 					     $this->joinSW($pl,$online);
 					     break;
 					  } else {
-                    $pl->sendTip("§f[SW-SOLO]§6 Looking match...!");
+                    $pl->sendTip("§f[SUHC-SOLO]§6 Looking match...!");
                        }
 				   }
                 } else {
@@ -305,7 +305,7 @@ $this->addSounds($playersinarena,"random.orb");
  $player->setGamemode(3);
  $this->manager->setPlayerSpec($player->getName(),$player->getLevel()->getFolderName());
  foreach($lob->getPlayers() as $playersinarena){  
-$playersinarena->sendMessage(Settings::GAME_PREFIX.TE::WHITE." new (spectator) ".TE::GRAY.$player->getNameTag().TE::AQUA." He joined the game"); }
+$playersinarena->sendMessage(Settings::GAME_PREFIX.TE::WHITE." new (spectator) ".TE::GRAY.$player->getNameTag().TE::AQUA." He has joined the match to watch."); }
 			      }
                } else {
                	$player->sendMessage("§c[ERROR]§6 This code is in use!");
