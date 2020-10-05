@@ -37,7 +37,7 @@ $this->addSounds($playersinarena,"random.orb");
  if($this->isArenaUse($mapa)==true) {
   $world = new Config($this->getDataFolder()."DATA/".$code.".yml", Config::YAML);
   $cage = $world->get("CAGE");
-  $this->manager->loadCage($player,true,$cage);
+  *//$this->manager->loadCage($player,true,$cage);
   $author = $world->get("AUTHOR");
   if($author==$player->getName()) {
        $player->getInventory()->clearAll();
@@ -202,7 +202,7 @@ $this->addSounds($playersinarena,"random.orb");
         $pr->save();
         $this->delTool($code);
         $this->delToolMap($map);
-     //   $this->removeCache($pl->getName());
+        $this->removeCache($pl->getName());
         $this->antiLag($pl->getName());
             }
         }
@@ -226,7 +226,7 @@ $this->addSounds($playersinarena,"random.orb");
         $pr->save();
         $this->delTool($code);
         $this->delToolMap($map);
-     //   $this->removeCache($pl->getName());
+        $this->removeCache($pl->getName());
         $this->antiLag($name);
             }
         }
