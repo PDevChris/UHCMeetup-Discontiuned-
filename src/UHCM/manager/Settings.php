@@ -212,7 +212,7 @@ class Settings {
 
 	const SIGN_PREFIX_END = TE::BOLD.TE::LIGHT_PURPLE."Uhc";
 
-	const BOSS_COLOR_1 = TE::BOLD.TE::GREEN."Spe".TE::DARK_GREEN."e".TE::GREEN."d".TE::DARK_GREEN."_".TE::GREEN."U".TE::DARK_GREEN."H".TE::GREEN."C";
+	const BOSS_COLOR_1 = TE::BOLD.TE::YELLOW."Speed UHC§7>>";
 
 
 
