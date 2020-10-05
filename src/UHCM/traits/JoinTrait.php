@@ -37,7 +37,6 @@ $this->addSounds($playersinarena,"random.orb");
  if($this->isArenaUse($mapa)==true) {
   $world = new Config($this->getDataFolder()."DATA/".$code.".yml", Config::YAML);
   $cage = $world->get("CAGE");
-  *//$this->manager->loadCage($player,true,$cage);
   $author = $world->get("AUTHOR");
   if($author==$player->getName()) {
        $player->getInventory()->clearAll();
