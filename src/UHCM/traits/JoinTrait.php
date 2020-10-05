@@ -225,7 +225,6 @@ $this->addSounds($playersinarena,"random.orb");
         $pr->save();
         $this->delTool($code);
         $this->delToolMap($map);
-        $this->removeCache($pl->getName());
         $this->antiLag($name);
             }
         }
