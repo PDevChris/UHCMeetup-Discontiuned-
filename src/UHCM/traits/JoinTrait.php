@@ -37,7 +37,7 @@ $this->addSounds($playersinarena,"random.orb");
  if($this->isArenaUse($mapa)==true) {
   $world = new Config($this->getDataFolder()."DATA/".$code.".yml", Config::YAML);
   $cage = $world->get("CAGE");
-//  $this->manager->loadCage($player,true,$cage);
+  $this->manager->loadCage($player,true,$cage);
   $author = $world->get("AUTHOR");
   if($author==$player->getName()) {
        $player->getInventory()->clearAll();
@@ -47,7 +47,7 @@ $this->addSounds($playersinarena,"random.orb");
      } else {
        $onliin = $this->manager->hasArenaCount($mapa) != null ? $this->manager->hasArenaCount($mapa) :  1;
       $this->speedStart($mapa,$onlin,$slotlvl);
-//     $this->manager->loadCage($player,false,"NOPOR7U7");
+     $this->manager->loadCage($player,false,"NOPOR7U7");
 }
  $this->addOnline($player->getName());
  $this->manager->setPlayer($player->getName(),$mapa);
@@ -98,11 +98,9 @@ $this->addSounds($playersinarena,"random.orb");
           $form->setTitle("§3§lClick to join match");
           $form->addButton("§l§2SpeedUHC§8-§aSOLO\n§r§8Connected players:§b ".$online);
           $form->addButton("§l§2SpeedUHC-§aCODE\n§r§8Private rooms");
-          /*
           if($player->hasPermission("create.sw.private")) {
-          $form->addButton("§l§2UHC_M§8-§aROOM\n§r§8Create room");
+          $form->addButton("§l§2NEW§8-§aROOM\n§r§8Create room");
           }
-          */
           $form->sendToPlayer($player);
          }
          
