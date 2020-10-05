@@ -46,7 +46,6 @@ $this->addSounds($playersinarena,"random.orb");
      } else {
        $onliin = $this->manager->hasArenaCount($mapa) != null ? $this->manager->hasArenaCount($mapa) :  1;
       $this->speedStart($mapa,$onlin,$slotlvl);
-     $this->manager->loadCage($player,false,"NOPOR7U7");
 }
  $this->addOnline($player->getName());
  $this->manager->setPlayer($player->getName(),$mapa);
