@@ -189,7 +189,7 @@ class UHCTask extends Task {
                             $this->plugin->addSounds($pl,"note.chime",$start);
 
 
-                         $pl->addTitle(" ","§l§eFightning in\n: ".$m,20,40,20);
+                         $pl->addTitle(" ","§l§eFightning in:\n ".$m,20,40,20);
 
 
                             } if($start==0) {
@@ -404,7 +404,7 @@ $config->set($arena."NEXT",300);
                             $m = $start<=7 ? "§c".$start : "§6".$start;
 
 
-                            $pl->sendTip(" §aOpening Cages In: ".$m);
+                            $pl->sendTip(" §bOpening Cages In: ".$m);
 
 
                             }
@@ -421,7 +421,7 @@ $config->set($arena."NEXT",300);
                                 $pl->setImmobile(false);
                                 $pl->addTitle(" §l§aFIGHT","§l§dBe the first to win!!",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.pillager.celebrate");
-                                $pl->sendMessage("§l§c[Speed UHC]§r §6	After 5 mintues the border will change!");
+                                $pl->sendMessage("§l§c[Speed UHC]§r §6	After 5 mintues the border will change! Any border that blocks the arena in the first seconds can be jump overed.");
                              }
                         } 
 
@@ -604,7 +604,7 @@ $config->set($arena."NEXT",300);
 if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $start==60*10+1 ) { 
     foreach($players as $pl) {
         $tt = $this->plugin->manager->setSegs($start);
-                      $pl->addTitle(" ","§l§cNEW EDGE IN: §a".$tt,20,40,20);
+                      $pl->addTitle(" ","§l§cBORDERS WILL SHRINK IN: §5".$tt,20,40,20);
                       $this->plugin->addSounds($pl,"random.pop");
                       }
     }
@@ -612,7 +612,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
     if($start==60*8+5 || $start==60*8+4 || $start==60*8+3 || $start==60*8+2 || $start==60*8+1 ) { 
     foreach($players as $pl) {
         $tt = $this->plugin->manager->setSegs($start);
-                      $pl->addTitle(" ","§l§cNEW EDGE IN: §a".$tt,20,40,20);
+                      $pl->addTitle(" ","§l§cBORDERS WILL SHRINK IN: §5".$tt,20,40,20);
                       $this->plugin->addSounds($pl,"random.pop");
                       }
     }
@@ -620,7 +620,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
     if($start==60*7+5 || $start==60*7+4 || $start==60*7+3 || $start==60*7+2 || $start==60*7+1 ) { 
     foreach($players as $pl) {
         $tt = $this->plugin->manager->setSegs($start);
-                      $pl->addTitle(" ","§l§cNEW EDGE IN: §a".$tt,20,40,20);
+                      $pl->addTitle(" ","§l§cBORDERS WILL SHRINK IN: §5".$tt,20,40,20);
                       $this->plugin->addSounds($pl,"random.pop");
                       }
     }
@@ -628,7 +628,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
     if($start==60*6+5 || $start==60*6+4 || $start==60*6+3 || $start==60*6+2 || $start==60*6+1 ) { 
     foreach($players as $pl) {
         $tt = $this->plugin->manager->setSegs($start);
-                      $pl->addTitle(" ","§l§cNEW EDGE IN: §a".$tt,20,40,20);
+                      $pl->addTitle(" ","§l§cBORDERS WILL SHRINK IN: §5".$tt,20,40,20);
                       $this->plugin->addSounds($pl,"random.pop");
                       }
     }
@@ -636,7 +636,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
                         if($start==60*10) { 
                         $this->plugin->manager->setBorde(80,$arena,60,0,-1,0,60,"GREEN");
                             foreach($players as $pl) {
-                                $pl->addTitle(" ","§l§cCHANGED EDGE: §680",20,40,20);
+                                $pl->addTitle(" ","§l§cBORDERS CHANGED: §680",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.witch.celebrate");
                                 }
                             }
@@ -644,7 +644,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
                             if($start==60*8) { 
                         $this->plugin->manager->setBorde(60,$arena,60,0,-1,0,40,"YELLOW");
                             foreach($players as $pl) {
-                                $pl->addTitle(" ","§l§cCHANGED EDGE: §660",20,40,20);
+                                $pl->addTitle(" ","§l§cBORDERS CHANGED: §660",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.witch.celebrate");
                                 }
                             }
@@ -652,7 +652,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
                        if($start==60*7) { 
                         $this->plugin->manager->setBorde(40,$arena,60,0,-1,0,20,"RED");
                             foreach($players as $pl) {
-                                $pl->addTitle(" ","§l§cCHANGED EDGE: §640",20,40,20);
+                                $pl->addTitle(" ","§l§cBORDERS CHANGED: §640",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.witch.celebrate");
                                 }
                             }
@@ -660,7 +660,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
                         if($start==60*6) { 
                         $this->plugin->manager->setBorde(20,$arena,60,0,-1,0,10,"BLACK");
                             foreach($players as $pl) {
-                                $pl->addTitle(" ","§l§cCHANGED EDGE: §620",20,40,20);
+                                $pl->addTitle(" ","§l§cBORDERS CHANGED: §620",20,40,20);
                                 $this->plugin->addSounds($pl,"mob.witch.celebrate");
                                 }
                             }
@@ -677,7 +677,7 @@ if($start==60*10+5 || $start==60*10+4 || $start==60*10+3 || $start==60*10+2 || $
                         $this->runningStart($pl,$arena,$counter,$start);
                             if($start <= 10) {
                             $m = $start<=7 ? "§c".$start : "§6".$start;
-                            $pl->sendTip(" §fEnd of the game in: ".$m);
+                            $pl->sendTip(" §aRestarting in: ".$m);
 
                             }
 
@@ -744,7 +744,7 @@ if(isset($onlines[$pl->getName()])) {
                      	}
                     }
               }
-                        	$pl->sendTip("§bComing back in:§f ".$start);
+                        	$pl->sendTip("§aRestarting in:§f ".$start);
 
 
                         } 
